@@ -1,4 +1,4 @@
-﻿namespace GUI
+namespace GUI
 {
     partial class frmStudent
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvstudent = new System.Windows.Forms.DataGridView();
+            this.dgvQLSV = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,34 +40,39 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.cmbFaculty = new System.Windows.Forms.ComboBox();
+            this.txtMSSV = new System.Windows.Forms.TextBox();
+            this.txtHT = new System.Windows.Forms.TextBox();
+            this.txtDTB = new System.Windows.Forms.TextBox();
+            this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chkUnregisterMajor = new System.Windows.Forms.CheckBox();
+            this.chkChuaDK = new System.Windows.Forms.CheckBox();
             this.picAnh = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvstudent)).BeginInit();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnThemSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngKíChuyênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvstudent
+            // dgvQLSV
             // 
-            this.dgvstudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvstudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvstudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvQLSV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQLSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQLSV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvstudent.Location = new System.Drawing.Point(284, 87);
-            this.dgvstudent.Name = "dgvstudent";
-            this.dgvstudent.Size = new System.Drawing.Size(517, 331);
-            this.dgvstudent.TabIndex = 0;
+            this.dgvQLSV.Location = new System.Drawing.Point(284, 87);
+            this.dgvQLSV.Name = "dgvQLSV";
+            this.dgvQLSV.Size = new System.Drawing.Size(517, 331);
+            this.dgvQLSV.TabIndex = 0;
+            this.dgvQLSV.SelectionChanged += new System.EventHandler(this.dgvQLSV_SelectionChanged);
             // 
             // Column1
             // 
@@ -151,36 +156,34 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Điểm TB";
             // 
-            // textBox1
+            // txtMSSV
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtMSSV.Location = new System.Drawing.Point(98, 114);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.Size = new System.Drawing.Size(158, 20);
+            this.txtMSSV.TabIndex = 5;
             // 
-            // textBox2
+            // txtHT
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtHT.Location = new System.Drawing.Point(98, 149);
+            this.txtHT.Name = "txtHT";
+            this.txtHT.Size = new System.Drawing.Size(158, 20);
+            this.txtHT.TabIndex = 5;
             // 
-            // textBox3
+            // txtDTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtDTB.Location = new System.Drawing.Point(98, 228);
+            this.txtDTB.Name = "txtDTB";
+            this.txtDTB.Size = new System.Drawing.Size(158, 20);
+            this.txtDTB.TabIndex = 5;
             // 
-            // cmbFaculty
+            // cmbKhoa
             // 
-            this.cmbFaculty.FormattingEnabled = true;
-            this.cmbFaculty.Location = new System.Drawing.Point(98, 188);
-            this.cmbFaculty.Name = "cmbFaculty";
-            this.cmbFaculty.Size = new System.Drawing.Size(158, 21);
-            this.cmbFaculty.TabIndex = 6;
+            this.cmbKhoa.FormattingEnabled = true;
+            this.cmbKhoa.Location = new System.Drawing.Point(98, 188);
+            this.cmbKhoa.Name = "cmbKhoa";
+            this.cmbKhoa.Size = new System.Drawing.Size(158, 21);
+            this.cmbKhoa.TabIndex = 6;
             // 
             // label1
             // 
@@ -191,15 +194,16 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Ảnh đại diện";
             // 
-            // chkUnregisterMajor
+            // chkChuaDK
             // 
-            this.chkUnregisterMajor.AutoSize = true;
-            this.chkUnregisterMajor.Location = new System.Drawing.Point(648, 64);
-            this.chkUnregisterMajor.Name = "chkUnregisterMajor";
-            this.chkUnregisterMajor.Size = new System.Drawing.Size(140, 17);
-            this.chkUnregisterMajor.TabIndex = 7;
-            this.chkUnregisterMajor.Text = "Chưa ĐK chuyên ngành";
-            this.chkUnregisterMajor.UseVisualStyleBackColor = true;
+            this.chkChuaDK.AutoSize = true;
+            this.chkChuaDK.Location = new System.Drawing.Point(648, 64);
+            this.chkChuaDK.Name = "chkChuaDK";
+            this.chkChuaDK.Size = new System.Drawing.Size(140, 17);
+            this.chkChuaDK.TabIndex = 7;
+            this.chkChuaDK.Text = "Chưa ĐK chuyên ngành";
+            this.chkChuaDK.UseVisualStyleBackColor = true;
+            this.chkChuaDK.CheckedChanged += new System.EventHandler(this.chkChuaDK_CheckedChanged);
             // 
             // picAnh
             // 
@@ -209,47 +213,71 @@
             this.picAnh.TabIndex = 8;
             this.picAnh.TabStop = false;
             // 
-            // button1
+            // btnOpen
             // 
-            this.button1.Location = new System.Drawing.Point(251, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOpen.Location = new System.Drawing.Point(251, 309);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(27, 23);
+            this.btnOpen.TabIndex = 9;
+            this.btnOpen.Text = "...";
+            this.btnOpen.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnThemSua
             // 
-            this.button2.Location = new System.Drawing.Point(56, 403);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 22);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Add/ Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThemSua.Location = new System.Drawing.Point(56, 403);
+            this.btnThemSua.Name = "btnThemSua";
+            this.btnThemSua.Size = new System.Drawing.Size(86, 22);
+            this.btnThemSua.TabIndex = 10;
+            this.btnThemSua.Text = "Add/ Update";
+            this.btnThemSua.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnXoa
             // 
-            this.button3.Location = new System.Drawing.Point(148, 403);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(65, 22);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(148, 403);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(65, 22);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Delete";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chứcNăngToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // chứcNăngToolStripMenuItem
+            // 
+            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngKíChuyênToolStripMenuItem});
+            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            // 
+            // đăngKíChuyênToolStripMenuItem
+            // 
+            this.đăngKíChuyênToolStripMenuItem.Name = "đăngKíChuyênToolStripMenuItem";
+            this.đăngKíChuyênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngKíChuyênToolStripMenuItem.Text = " ";
             // 
             // frmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThemSua);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.picAnh);
-            this.Controls.Add(this.chkUnregisterMajor);
-            this.Controls.Add(this.cmbFaculty);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chkChuaDK);
+            this.Controls.Add(this.cmbKhoa);
+            this.Controls.Add(this.txtDTB);
+            this.Controls.Add(this.txtHT);
+            this.Controls.Add(this.txtMSSV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -257,12 +285,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvstudent);
+            this.Controls.Add(this.dgvQLSV);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmStudent";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvstudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,28 +302,31 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvstudent;
+        private System.Windows.Forms.DataGridView dgvQLSV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox cmbFaculty;
+        private System.Windows.Forms.TextBox txtMSSV;
+        private System.Windows.Forms.TextBox txtHT;
+        private System.Windows.Forms.TextBox txtDTB;
+        private System.Windows.Forms.ComboBox cmbKhoa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox chkUnregisterMajor;
+        private System.Windows.Forms.CheckBox chkChuaDK;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.PictureBox picAnh;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnThemSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngKíChuyênToolStripMenuItem;
     }
 }
 
