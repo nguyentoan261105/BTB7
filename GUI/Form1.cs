@@ -187,10 +187,6 @@ namespace GUI
             BindGrid(list);
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    btnThemSua_Click(sender, e);
-        //}
 
         private void dgvQLSV_SelectionChanged(object sender, EventArgs e)
         {
@@ -208,8 +204,20 @@ namespace GUI
                 }
             }
         }
+
+        private void đăngKíChuyênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMajorRegister frmDKCN = new frmMajorRegister();
+
+            // Thêm xử lý khi đóng form mới
+            frmDKCN.FormClosed += (s, args) =>
+            {
+                this.Show();         // Hiện lại frmStudent khi đóng Form2
+                LoadStudentList();
+            };
+            frmDKCN.ShowDialog();
+            frmDKCN.Show();
+            this.Hide(); // PHẢI CÓ DÒNG NÀY để ẩn frmStudent
+        }  
     }
 }
-
-    
-
